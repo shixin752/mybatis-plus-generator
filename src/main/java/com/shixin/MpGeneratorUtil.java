@@ -20,26 +20,26 @@ import java.io.IOException;
 public class MpGeneratorUtil {
 
     //对哪些表进行自动生成 , TABLENAME = {} 会对所有的表都进行生成
-    private static String[] TABLENAME = {"test","test2"};
+    private static String[] TABLENAME = {"test1","test2"};
 
     //作者信息，会自动添加到文件内
     private static String AUTHOR = "shixin";
 
     //数据库连接
-    private static String DRIVENAME = "com.mysql.cj.jdbc.Driver";
-    private static String DATABASE = "jdbc:mysql://localhost:3306/tablename";
-    private static String USERNAME = "root";
-    private static String PASSWORD = "root";
+    private static String DRIVENAME = "com.mysql.cj.jdbc.Driver";                   //驱动，如果版本低于8.0，首先需要更换jar包，此处使用com.mysql.jdbc.Driver
+    private static String DATABASE = "jdbc:mysql://localhost:3306/tablename";       //数据库连接url
+    private static String USERNAME = "root";                                        //账号
+    private static String PASSWORD = "root";                                        //密码
 
     //对应的包名，第一个为父级包名，其余为子级包名，可以根据需求更改。
     //如下配置会生成 com.shixin.mapper  com.shixin.service  com.shixin.controller ...
     //子包也可以为  xx.xx 格式来代表生成多层文件夹
-    private static String PARENT_PACKAGE = "com.shixin";
+    private static String PARENT_PACKAGE = "com.shixin";            //基础包
+    private static String CONTROLLER_FOLERNAME = "controller";      //controller
     private static String MAPPER_FOLERNAME = "mapper";              //Mapper类Java文件 ，也可以叫做dao层文件
-    private static String SERVICE_FOLERNAME = "service";            //service
-    private static String CONTROLLER_FOLERNAME = "controller";
+    private static String XML_FOLERNAME = "mapperxml";              //XML文件
     private static String ENTITY_FOLERNAME = "pojo";                //pojo类文件
-    private static String XML_FOLERNAME = "mapperxml";               //XML文件
+    private static String SERVICE_FOLERNAME = "service";            //service
 
     public static void main(String[] args) throws IOException {
 
