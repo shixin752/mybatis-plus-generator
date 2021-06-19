@@ -27,9 +27,9 @@ public class MpGeneratorUtil {
 
     //数据库连接
     private static String DRIVENAME = "com.mysql.cj.jdbc.Driver";
-    private static String DATABASE = "jdbc:mysql://106.75.162.171:3306/pawcode_base";
-    private static String USERNAME = "shixin";
-    private static String PASSWORD = "shixin";
+    private static String DATABASE = "jdbc:mysql://localhost:3306/tablename";
+    private static String USERNAME = "root";
+    private static String PASSWORD = "root";
 
     //对应的包名，第一个为父级包名，其余为子级包名，可以根据需求更改。
     //如下配置会生成 com.shixin.mapper  com.shixin.service  com.shixin.controller ...
